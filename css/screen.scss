@@ -1,0 +1,423 @@
+$padding: 0 24px;
+$margin-bottom: 100px;
+$all-color: #3737fc;
+$font-size-480: 16px;
+$font-size-title-480: 24px;
+$font-size-768: 20px;
+$font-size-title-768: 40px;
+
+@mixin photo-size($width, $height) {
+    width: $width;
+    height: $height;
+    border-radius: 20px;
+}
+
+@mixin projects-size($width, $height, $top, $right, $bottom, $left) {
+    width: $width;
+    height: $height;
+    border-top-left-radius: $top;
+    border-top-right-radius: $right;
+    border-bottom-right-radius: $bottom;
+    border-bottom-left-radius: $left;
+}
+
+@mixin text-size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin contect-title-box($width) {
+    width: $width;
+    margin-bottom: 40px;
+}
+
+@mixin text-box($width, $height, $top, $right, $bottom, $left) {
+    width: $width;
+    height: $height;
+    background-color: white;
+    border-top-left-radius: $top;
+    border-top-right-radius: $right;
+    border-bottom-right-radius: $bottom;
+    border-bottom-left-radius: $left;
+}
+
+@mixin flex-box($direction, $justify, $items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $items;
+}
+
+// screen
+
+@media screen and (max-width: 480px) {
+    html {
+        body {
+            width: 100%;
+            overflow: hidden;
+
+            .header {
+                padding: $padding;
+
+                h1 {
+                    width: 100%;
+                    font-size: 150px;
+                    height: 100%;
+                }
+
+                .header-box {
+                    padding: 0;
+                    @include text-size(100%, normal);
+
+                    .header-title {
+                        font-size: 20px;
+                        display: block;
+
+                        h2 {
+                            margin: 0;
+                            font-size: 73px;
+                            text-align: center;
+                            &.number-year {
+                                margin-right: 0;
+                                border-bottom: 2px solid $all-color;
+                            }
+
+                            &.header-EN {
+                                &.number-year {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contect-title {
+                padding: $padding;
+
+                h1 {
+                    font-size: 32px;
+                    height: 50px;
+
+                    &.about-title,
+                    &.projects-title,
+                    &.banners-title {
+                        letter-spacing: 0;
+                    }
+                }
+
+                h2 {
+                    font-size: 32px;
+                }
+
+                &.banners-box,
+                &.about-box,
+                &.projects-box {
+                    @include contect-title-box(100%);
+                }
+            }
+
+            .about {
+                display: block;
+                margin-bottom: $margin-bottom;
+
+                .about-contect {
+                    @include flex-box(column, center, center);
+
+                    .about-left {
+                        padding: $padding;
+                        margin-bottom: 60px;
+
+                        img {
+                            &.about-photo {
+                                @include photo-size(100%, 100%);
+                            }
+                        }
+                    }
+
+                    .about-right {
+                        padding: $padding;
+
+                        .right {
+                            .right-title {
+                                font-size: $font-size-title-480;
+
+                                h3 {
+                                    font-size: $font-size-title-480;
+
+                                    &.ch-title {
+                                        font-size: $font-size-title-480;
+                                    }
+                                }
+                            }
+
+                            p {
+                                @include text-size(100%, normal);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .projects {
+                padding: $padding;
+                margin-bottom: $margin-bottom;
+
+                .projects-contect {
+                    .projects-card {
+                        @include flex-box(column-reverse, center, center);
+
+                        .card {
+                            @include text-box(100%, 100%, 0, 0, 20px, 20px);
+
+                            .card-title {
+                                h1 {
+                                    font-size: 25px;
+                                    margin-bottom: 10px;
+                                }
+                            }
+
+                            .card-contect {
+                                p {
+                                    font-size: $font-size-480;
+
+                                    .text-up {
+                                        @include text-size(100%, normal);
+                                    }
+                                }
+                            }
+                        }
+
+                        .card-photo {
+                            img {
+                                @include projects-size(100%, 100%, 20px, 20px, 0, 0);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .banners {
+                padding: $padding;
+                margin-bottom: 60px;
+
+                .banners-contect {
+                    @include flex-box(column, center, center);
+
+                    img {
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    html {
+        body {
+            width: 100%;
+            overflow: hidden;
+
+            .header {
+                padding: $padding;
+
+                h1 {
+                    width: 100%;
+                    text-align: center;
+                }
+
+                .header-box {
+                    padding: 0;
+                    @include text-size(100%, normal);
+
+                    .header-title {
+                        font-size: 20px;
+                        display: block;
+
+                        h2 {
+                            margin: 0;
+                            font-size: 73px;
+                            text-align: center;
+                            &.number-year {
+                                margin-right: 0;
+                                border-bottom: 2px solid $all-color;
+                            }
+
+                            &.header-EN {
+                                &.number-year {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .contect-title {
+                padding: $padding;
+
+                h1 {
+                    font-size: 80px;
+                    margin-bottom: 30px;
+
+                    &.about-title {
+                        letter-spacing: 7px;
+                    }
+
+                    &.projects-title {
+                        letter-spacing: 61px;
+                    }
+
+                    &.banners-title {
+                        letter-spacing: 21px;
+                    }
+                }
+
+                h2 {
+                    font-size: 70px;
+                }
+
+                &.banners-box {
+                    @include contect-title-box(100%);
+                }
+
+                &.about-box {
+                    @include contect-title-box(100%);
+                }
+
+                &.projects-box {
+                    @include contect-title-box(100%);
+                }
+            }
+
+            .about {
+                display: block;
+                margin-bottom: $margin-bottom;
+
+                .about-contect {
+                    @include flex-box(column, center, center);
+
+                    .about-left {
+                        padding: $padding;
+                        margin-bottom: 60px;
+
+                        img {
+                            &.about-photo {
+                                @include photo-size(100%, 100%);
+                            }
+                        }
+
+                        .left-link {
+                            img {
+                                @include photo-size(48px, 48px);
+                            }
+                            span {
+                                font-size: $font-size-768;
+                            }
+
+                            .link-li {
+                                a {
+                                    font-size: $font-size-768;
+                                }
+                                span {
+                                    font-size: $font-size-768;
+                                }
+                            }
+                        }
+                    }
+
+                    .about-right {
+                        padding: $padding;
+                        .right {
+                            .right-title {
+                                font-size: $font-size-title-768;
+                                h3 {
+                                    font-size: $font-size-title-768;
+
+                                    &.ch-title {
+                                        font-size: $font-size-title-768;
+                                    }
+                                }
+                            }
+
+                            p {
+                                font-size: $font-size-768;
+                                @include text-size(100%, 100%);
+                            }
+
+                            .right-contect {
+                                font-size: $font-size-768;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .projects {
+                padding: $padding;
+                margin-bottom: $margin-bottom;
+
+                .projects-contect {
+                    .projects-card {
+                        @include flex-box(column-reverse, center, center);
+
+                        .card {
+                            @include text-box(100%, 100%, 0, 0, 20px, 20px);
+
+                            .card-title {
+                                h1 {
+                                    font-size: $font-size-title-768;
+                                    margin-bottom: 10px;
+                                }
+
+                                span {
+                                    font-size: $font-size-768;
+                                }
+                            }
+
+                            .card-contect {
+                                p {
+                                    font-size: 20px;
+                                    .text-up {
+                                        @include text-size(100%, normal);
+                                    }
+                                }
+
+                                .button-box {
+                                    button {
+                                        font-size: $font-size-768;
+                                        width: 150px;
+                                        height: 60px;
+                                        border-radius: 30px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .card-photo {
+                            img {
+                                @include projects-size(100%, 100%, 20px, 20px, 0, 0);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .banners {
+                padding: $padding;
+                margin-bottom: 60px;
+
+                .banners-contect {
+                    @include flex-box(column, center, center);
+
+                    img {
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

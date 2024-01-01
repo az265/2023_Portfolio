@@ -1,0 +1,441 @@
+// html-color
+
+$all-color: #3737fc;
+$hover-color: #fcb037;
+$span-color: #aaa;
+
+// font-style
+
+@font-face {
+    font-family: Staatliches;
+    src: url("../font/Staatliches/Staatliches-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: NotoSansTC-Regular;
+    src: url("../font/Noto_Sans_TC/NotoSansTC-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: NotoSansTC-Blod;
+    src: url("../font/Noto_Sans_TC/NotoSansTC-Black.otf") format("opentype");
+}
+
+@font-face {
+    font-family: NotoSansTC-Medium;
+    src: url("../font/Noto_Sans_TC/NotoSansTC-Medium.otf") format("opentype");
+}
+
+$EN-family: Staatliches;
+$CH-family: NotoSansTC-Blod;
+$text-family: NotoSansTC-Regular;
+$title-family: NotoSansTC-Medium;
+$EN-weight: normal;
+$line-height: 1.75;
+
+// font-size
+
+$name-size: 250px;
+$title-size: 60px;
+$contect-title: 28px;
+$CH-size: 25px;
+$date-size: 18px;
+$text-size: 16px;
+$second-name-size: 60px;
+$box-sizing: border-box;
+
+// others
+
+$border-radius: 20px;
+
+@mixin icon-size {
+    width: 40px;
+    height: 40px;
+}
+
+@mixin photo-size {
+    width: 400px;
+    height: 400px;
+    border-radius: $border-radius;
+}
+
+@mixin projects-size {
+    width: 558px;
+    height: 506px;
+    border-bottom-right-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+}
+
+@mixin flex-box($direction, $justify, $items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $items;
+}
+
+@mixin title-box {
+    width: 558px;
+    height: 155px;
+}
+
+@mixin contect-title-box($width) {
+    width: $width;
+    margin-bottom: 40px;
+}
+
+@mixin text-box {
+    box-sizing: border-box;
+    padding: 40px;
+    width: 384px;
+    height: 506px;
+    background-color: white;
+    border-bottom-left-radius: $border-radius;
+    border-top-left-radius: $border-radius;
+}
+
+@mixin p-size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin link-style {
+    color: #000;
+    &:hover {
+        color: $all-color;
+        transition: all ease-in-out 0.2s;
+    }
+}
+
+// button
+
+@mixin button {
+    color: #fff;
+    border: none;
+    font-size: $text-size;
+    width: 120px;
+    height: 48px;
+    padding: 12px 28px;
+    border-radius: 24px;
+    background-color: $all-color;
+
+    &:hover {
+        background-color: $hover-color;
+        transition: all ease-in-out 0.2s;
+        color: #000;
+    }
+}
+
+// html-scss
+
+html {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #f7f7f7;
+    position: relative;
+    scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        margin: 0;
+        font-family: $text-family;
+    }
+
+    span {
+        font-family: $text-family;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        .header {
+            @include flex-box(column, center, center);
+
+            h1 {
+                width: 718px;
+                height: 250px;
+                margin-top: 200px;
+                font-family: $EN-family;
+                color: $all-color;
+                font-weight: $EN-weight;
+                font-size: $name-size;
+            }
+
+            .header-box {
+                padding: 40px 70px;
+                border: solid 2px #3737fc;
+                background-color: #fff;
+                margin-bottom: 362px;
+                box-sizing: $box-sizing;
+
+                .header-title {
+                    font-size: $second-name-size;
+                    @include flex-box(row, normal, center);
+
+                    h2 {
+                        font-family: $EN-family;
+                        font-weight: $EN-weight;
+
+                        &.header-CH {
+                            font-family: $CH-family;
+
+                            &.letter-CH {
+                                letter-spacing: 30px;
+                            }
+                        }
+
+                        &.header-EN {
+                            color: $all-color;
+                        }
+
+                        &.number-year {
+                            margin-right: 80px;
+                        }
+                    }
+
+                    .header-CH-box {
+                        @include flex-box(row, center, center);
+                    }
+                }
+            }
+        }
+
+        .contect-title {
+            @include title-box();
+
+            h1 {
+                font-size: $title-size;
+                font-family: $CH-family;
+                height: 70px;
+
+                &.about-title {
+                    letter-spacing: 10px;
+                }
+
+                &.projects-title {
+                    letter-spacing: 86px;
+                }
+
+                &.banners-title {
+                    letter-spacing: 32px;
+                }
+            }
+
+            h2 {
+                font-size: $title-size;
+                color: $all-color;
+                font-family: $EN-family;
+                font-weight: $EN-weight;
+            }
+
+            &.banners-box {
+                @include contect-title-box(1025px);
+                text-align: center;
+
+                .banners-title-box {
+                    @include flex-box(row, center, center);
+                }
+            }
+
+            &.about-box {
+                @include contect-title-box(946px);
+            }
+
+            &.projects-box {
+                @include contect-title-box(942px);
+            }
+        }
+
+        .about {
+            @include flex-box(column, center, center);
+            margin-bottom: 240px;
+
+            .about-contect {
+                @include flex-box(row, center, flex-start);
+                box-sizing: $box-sizing;
+
+                .about-left {
+                    img {
+                        &.about-photo {
+                            @include photo-size();
+                            filter: grayscale(100%);
+                            margin-bottom: 10px;
+
+                            &:hover {
+                                filter: grayscale(0%);
+                                transition: all ease-in-out 0.2s;
+                            }
+                        }
+                    }
+
+                    .left-link {
+                        @include flex-box(row, normal, center);
+                        font-weight: 500;
+
+                        img {
+                            @include icon-size();
+                            margin-right: 10px;
+                        }
+
+                        .link-li {
+                            a {
+                                @include link-style();
+                            }
+                        }
+                    }
+                }
+
+                .about-right {
+                    padding-left: 40px;
+
+                    .right {
+                        margin-bottom: 30px;
+
+                        h3 {
+                            font-family: $EN-family;
+                            color: $all-color;
+                            font-size: $contect-title;
+                        }
+
+                        .right-title {
+                            @include flex-box(row, normal, center);
+
+                            .ch-title {
+                                font-family: $CH-family;
+                                font-size: $CH-size;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        p {
+                            @include p-size(506px, normal);
+                            font-size: $text-size;
+                            line-height: $line-height;
+                        }
+                    }
+                }
+            }
+        }
+
+        .projects {
+            margin-bottom: 341px;
+            @include flex-box(column, center, center);
+
+            .projects-contect {
+                .projects-card {
+                    @include flex-box(row, center, center);
+                    margin-bottom: 30px;
+                    box-sizing: $box-sizing;
+
+                    .card {
+                        @include text-box();
+
+                        .card-title {
+                            font-family: $title-family;
+
+                            span {
+                                font-family: $EN-family;
+                                color: $span-color;
+                                font-size: $date-size;
+                            }
+                        }
+
+                        .card-contect {
+                            padding: 20px 0;
+
+                            p {
+                                margin-bottom: 15px;
+                                line-height: $line-height;
+
+                                .text-up {
+                                    @include p-size(304px, 80px);
+                                }
+
+                                .text-down {
+                                    @include p-size(304px, 164px);
+                                }
+                            }
+
+                            .button-box {
+                                button {
+                                    @include button;
+                                }
+                            }
+                        }
+                    }
+
+                    .card-photo {
+                        img {
+                            @include projects-size();
+                        }
+                    }
+                }
+            }
+        }
+
+        .banners {
+            @include flex-box(column, center, center);
+            margin-bottom: 290px;
+
+            .banners-contect {
+                @include flex-box(row, center, center);
+                flex-wrap: wrap;
+
+                img {
+                    width: 600px;
+                    margin: 5px;
+                    filter: grayscale(100%);
+
+                    &:hover {
+                        filter: grayscale(0);
+                        box-shadow: 0px 0px 40px rgba(61, 61, 61, 0.567);
+                        transition: all ease-in-out 0.1s;
+                    }
+                }
+            }
+        }
+
+        footer {
+            @include flex-box(row, center, center);
+            background-color: $all-color;
+            height: 70px;
+
+            span {
+                font-family: $EN-family;
+                font-weight: $EN-weight;
+                color: #fff;
+                font-size: 26px;
+            }
+        }
+    }
+}

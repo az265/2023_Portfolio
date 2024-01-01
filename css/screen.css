@@ -1,0 +1,374 @@
+@media screen and (max-width: 480px) {
+  html body {
+    width: 100%;
+    overflow: hidden;
+  }
+  html body .header {
+    padding: 0 24px;
+  }
+  html body .header h1 {
+    width: 100%;
+    font-size: 150px;
+    height: 100%;
+  }
+  html body .header .header-box {
+    padding: 0;
+    width: 100%;
+    height: normal;
+  }
+  html body .header .header-box .header-title {
+    font-size: 20px;
+    display: block;
+  }
+  html body .header .header-box .header-title h2 {
+    margin: 0;
+    font-size: 73px;
+    text-align: center;
+  }
+  html body .header .header-box .header-title h2.number-year {
+    margin-right: 0;
+    border-bottom: 2px solid #3737fc;
+  }
+  html body .header .header-box .header-title h2.header-EN.number-year {
+    display: none;
+  }
+  html body .contect-title {
+    padding: 0 24px;
+  }
+  html body .contect-title h1 {
+    font-size: 32px;
+    height: 50px;
+  }
+  html body .contect-title h1.about-title, html body .contect-title h1.projects-title, html body .contect-title h1.banners-title {
+    letter-spacing: 0;
+  }
+  html body .contect-title h2 {
+    font-size: 32px;
+  }
+  html body .contect-title.banners-box, html body .contect-title.about-box, html body .contect-title.projects-box {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  html body .about {
+    display: block;
+    margin-bottom: 100px;
+  }
+  html body .about .about-contect {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body .about .about-contect .about-left {
+    padding: 0 24px;
+    margin-bottom: 60px;
+  }
+  html body .about .about-contect .about-left img.about-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  html body .about .about-contect .about-right {
+    padding: 0 24px;
+  }
+  html body .about .about-contect .about-right .right .right-title {
+    font-size: 24px;
+  }
+  html body .about .about-contect .about-right .right .right-title h3 {
+    font-size: 24px;
+  }
+  html body .about .about-contect .about-right .right .right-title h3.ch-title {
+    font-size: 24px;
+  }
+  html body .about .about-contect .about-right .right p {
+    width: 100%;
+    height: normal;
+  }
+  html body .projects {
+    padding: 0 24px;
+    margin-bottom: 100px;
+  }
+  html body .projects .projects-contect .projects-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body .projects .projects-contect .projects-card .card {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  html body .projects .projects-contect .projects-card .card .card-title h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  html body .projects .projects-contect .projects-card .card .card-contect p {
+    font-size: 16px;
+  }
+  html body .projects .projects-contect .projects-card .card .card-contect p .text-up {
+    width: 100%;
+    height: normal;
+  }
+  html body .projects .projects-contect .projects-card .card-photo img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  html body .banners {
+    padding: 0 24px;
+    margin-bottom: 60px;
+  }
+  html body .banners .banners-contect {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body .banners .banners-contect img {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  html body {
+    width: 100%;
+    overflow: hidden;
+  }
+  html body .header {
+    padding: 0 24px;
+  }
+  html body .header h1 {
+    width: 100%;
+    text-align: center;
+  }
+  html body .header .header-box {
+    padding: 0;
+    width: 100%;
+    height: normal;
+  }
+  html body .header .header-box .header-title {
+    font-size: 20px;
+    display: block;
+  }
+  html body .header .header-box .header-title h2 {
+    margin: 0;
+    font-size: 73px;
+    text-align: center;
+  }
+  html body .header .header-box .header-title h2.number-year {
+    margin-right: 0;
+    border-bottom: 2px solid #3737fc;
+  }
+  html body .header .header-box .header-title h2.header-EN.number-year {
+    display: none;
+  }
+  html body .contect-title {
+    padding: 0 24px;
+  }
+  html body .contect-title h1 {
+    font-size: 80px;
+    margin-bottom: 30px;
+  }
+  html body .contect-title h1.about-title {
+    letter-spacing: 7px;
+  }
+  html body .contect-title h1.projects-title {
+    letter-spacing: 61px;
+  }
+  html body .contect-title h1.banners-title {
+    letter-spacing: 21px;
+  }
+  html body .contect-title h2 {
+    font-size: 70px;
+  }
+  html body .contect-title.banners-box {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  html body .contect-title.about-box {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  html body .contect-title.projects-box {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  html body .about {
+    display: block;
+    margin-bottom: 100px;
+  }
+  html body .about .about-contect {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body .about .about-contect .about-left {
+    padding: 0 24px;
+    margin-bottom: 60px;
+  }
+  html body .about .about-contect .about-left img.about-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  html body .about .about-contect .about-left .left-link img {
+    width: 48px;
+    height: 48px;
+    border-radius: 20px;
+  }
+  html body .about .about-contect .about-left .left-link span {
+    font-size: 20px;
+  }
+  html body .about .about-contect .about-left .left-link .link-li a {
+    font-size: 20px;
+  }
+  html body .about .about-contect .about-left .left-link .link-li span {
+    font-size: 20px;
+  }
+  html body .about .about-contect .about-right {
+    padding: 0 24px;
+  }
+  html body .about .about-contect .about-right .right .right-title {
+    font-size: 40px;
+  }
+  html body .about .about-contect .about-right .right .right-title h3 {
+    font-size: 40px;
+  }
+  html body .about .about-contect .about-right .right .right-title h3.ch-title {
+    font-size: 40px;
+  }
+  html body .about .about-contect .about-right .right p {
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  html body .about .about-contect .about-right .right .right-contect {
+    font-size: 20px;
+  }
+  html body .projects {
+    padding: 0 24px;
+    margin-bottom: 100px;
+  }
+  html body .projects .projects-contect .projects-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body .projects .projects-contect .projects-card .card {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  html body .projects .projects-contect .projects-card .card .card-title h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  html body .projects .projects-contect .projects-card .card .card-title span {
+    font-size: 20px;
+  }
+  html body .projects .projects-contect .projects-card .card .card-contect p {
+    font-size: 20px;
+  }
+  html body .projects .projects-contect .projects-card .card .card-contect p .text-up {
+    width: 100%;
+    height: normal;
+  }
+  html body .projects .projects-contect .projects-card .card .card-contect .button-box button {
+    font-size: 20px;
+    width: 150px;
+    height: 60px;
+    border-radius: 30px;
+  }
+  html body .projects .projects-contect .projects-card .card-photo img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  html body .banners {
+    padding: 0 24px;
+    margin-bottom: 60px;
+  }
+  html body .banners .banners-contect {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  html body .banners .banners-contect img {
+    width: 100%;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=screen.css.map */
